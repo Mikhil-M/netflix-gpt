@@ -5,7 +5,7 @@ import { auth } from '../utils/firebase';
 import { addUser } from '../utils/userSlice';
 import { checkValidData } from '../utils/validate';
 import Header from './Header';
-import { USER_AVATAR } from "../utils/constants";
+import { BG_IMG_URL, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -62,7 +62,7 @@ const Login = () => {
     <div>
       <Header />
       <div className='absolute'>
-        <img src='https://assets.nflxext.com/ffe/siteui/vlv3/151f3e1e-b2c9-4626-afcd-6b39d0b2694f/web/IN-en-20241028-TRIFECTA-perspective_bce9a321-39cb-4cce-8ba6-02dab4c72e53_large.jpg'
+        <img src={BG_IMG_URL}
           alt='login-background' />
       </div>
       <form onSubmit={(event) => event.preventDefault()} className='absolute w-1/4 p-12 my-36 mx-auto right-0 left-0 bg-black text-white bg-opacity-80 rounded-lg'>
